@@ -5,6 +5,7 @@ run();
 async function run(){
     try
     {
+/* Creating a new instance of the Kafka class. */
         const kafka = new Kafka({
             "clientId": "myapp",
             "brokers" :[
@@ -18,6 +19,7 @@ async function run(){
         await admin.connect()
         console.log("Connected!")
         //A-M, N-Z
+/* Creating a topic called Users with 2 partitions. */
         await admin.createTopics({
             "topics": [{
                 "topic" : "Users",

@@ -15,11 +15,13 @@ async function run(){
         await consumer.connect()
         console.log("Connected!")
         
+/* Subscribing to the topic "Users" and it is reading from the beginning of the topic. */
         await consumer.subscribe({
             "topic": "Users",
             "fromBeginning": true
         })
         
+/* Reading the messages from the topic. */
         await consumer.run({
             "eachMessage": async result => {
                 console.log(`RVD Msg ${result.message.value} on partition ${result.partition}`)

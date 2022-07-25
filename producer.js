@@ -15,6 +15,7 @@ async function run(){
         await producer.connect()
         console.log("Connected!")
         //A-M 0 , N-Z 1 
+/* Sending the message to the partition based on the first letter of the message. */
         const partition = msg[0] < "N" ? 0 : 1;
         const result =  await producer.send({
             "topic": "Users",
