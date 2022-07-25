@@ -17,3 +17,6 @@ localhost kafka test with docker
 
 5. consumer to receieve msg
    `node consumer.js`
+
+
+Ref - [hnasr/javascript_playground/kafka](https://github.com/hnasr/javascript_playground/tree/master/kafka)
